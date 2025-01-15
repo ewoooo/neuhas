@@ -259,7 +259,7 @@ a {
 	transition: transform ease 0.5s, opacity linear 0.3s;
 }
 
-.content--unwrapped {
+.is-visible {
 	opacity: 100;
 	transform: translateY(50px);
 }

@@ -60,7 +60,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	const lastClone = carousel.lastElementChild.cloneNode(true);
 	carousel.append(firstClone);
 	carousel.prepend(lastClone);
-	let curIndex = 1;
+	let curIndex = 0;
 	let lastIndex = carousel.children.length - 1;
 
 	// 슬라이드를 하면
@@ -140,102 +140,38 @@ window.addEventListener("DOMContentLoaded", () => {
 	const dimmerTop = document.querySelector(".dimmer__top");
 	const animatedAssets = document.querySelectorAll(".content");
 
-	let observer;
-	function createObserver() {
-		if (window.innerWidth >= 320) {
-			observer = new IntersectionObserver(
-				(entries) => {
-					entries.forEach((entry) => {
-						if (entry.inIntersecting) entry.target.classList.add("content--unwrapped");
-						else entry.target.classList.remove("content--unwrapped");
-					});
-				},
-				{
-					threshold: 0.3,
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(
+			(entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add("is-visible");
+				} else {
+					entry.target.classList.remove("is-visible");
 				}
-			);
+			},
+			{
+				threshold: 0.3,
+			}
+		);
+	});
 
-			animatedAssets.forEach((asset) => observer.observe(asset));
+	animatedAssets.forEach((asset) => observer.observe(asset));
+
+	window.addEventListener("scroll", (e) => {
+		if (window.scrollY >= window.innerHeight || window.scrollY >= 812) {
+			headerCaption.classList.add("header__caption--wrapped");
+			dimmerTop.classList.add("dimmer--unwrapped");
+		} else {
+			headerCaption.classList.remove("header__caption--wrapped");
+			dimmerTop.classList.remove("dimmer--unwrapped");
 		}
-	}
-
-	createObserver();
-
-	// window.addEventListener("scroll", (e) => {
-	// 	if (window.scrollY >= window.innerHeight || window.scrollY >= 812) {
-	// 		headerCaption.classList.add("header__caption--wrapped");
-	// 		dimmerTop.classList.add("dimmer--unwrapped");
-	// 	} else {
-	// 		headerCaption.classList.remove("header__caption--wrapped");
-	// 		dimmerTop.classList.remove("dimmer--unwrapped");
-	// 	}
-
-	// 	for (rect of contentArr) {
-	// 		if (rect.getBoundingClientRect().top - window.scrollY <= 200) {
-	// 			rect.classList.add("content--unwrapped");
-	// 		}
-	// 	}
-	// });
+	});
 
 	const navBtn = document.querySelector(".navigation__button");
 	const navContent = document.querySelector(".navigation__content");
 	navBtn.addEventListener("click", () => {
 		navContent.classList.toggle("navigation__content--unwrapped");
 	});
-});
-
-// rail
-window.addEventListener("DOMContentLoaded", () => {
-	const rail = document.querySelector(".rail__container");
-	let railIndex = 0;
-	let t = 0;
-	let railStartPos = 0;
-	let railEndPos = 0;
-	let railDist = 0;
-	let railSpd = 0;
-	let isDragging = null;
-
-	rail.addEventListener("mousedown", (e) => {
-		railStartPos = e.clientX;
-		if (isDragging == null) {
-			isDragging = setInterval(() => {
-				t++;
-			}, 100);
-		}
-	});
-
-	rail.addEventListener("mouseup", (e) => {
-		let thres = 5;
-		railEndPos = e.clientX;
-		if (isDragging !== null) {
-			clearInterval(isDragging);
-			isDragging = null;
-		}
-		railDist = railEndPos - railStartPos;
-		railSpd = Math.abs(railDist / t);
-		t = 0;
-
-		if (railDist < 0 && railSpd >= thres) {
-			railIndex++;
-			if (railIndex > 2) {
-				railIndex = 0;
-			}
-		}
-
-		if (railDist > 0 && railSpd >= thres) {
-			railIndex--;
-			if (railIndex <= -1) {
-				railIndex = 2;
-			}
-		}
-
-		updateRail(railIndex);
-	});
-
-	function updateRail(index) {
-		console.log("index: ", railIndex);
-		rail.style.transform = `translateX(${index * -100}%)`;
-	}
 });
 
 window.addEventListener("DOMContentLoaded", () => {
