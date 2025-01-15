@@ -1,3 +1,24 @@
+@font-face {
+	font-family: "Pretendard";
+	font-weight: 600;
+	font-display: swap;
+	src: local("Pretendard SemiBold"), url(./woff2/Pretendard-SemiBold.woff2) format("woff2");
+}
+
+@font-face {
+	font-family: "Pretendard";
+	font-weight: 500;
+	font-display: swap;
+	src: local("Pretendard Medium"), url(./woff2/Pretendard-Medium.woff2) format("woff2");
+}
+
+@font-face {
+	font-family: "Pretendard";
+	font-weight: 400;
+	font-display: swap;
+	src: local("Pretendard Regular"), url(./woff2/Pretendard-Regular.woff2) format("woff2");
+}
+
 :where(html, body) {
 	min-height: 100dvh;
 	scroll-behavior: smooth;
