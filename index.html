@@ -16,7 +16,11 @@
 		<div id="wrapper">
 			<nav class="navigation__container">
 				<button class="navigation navigation__button navigation__elem">!</button>
-				<div class="navigation navigation__content">lorem Ipsum</div>
+				<div class="navigation navigation__content navigation__content--unwrapped">
+					<a href="#introduction">소개</a>
+					<a href="#activity">행사 알아보기</a>
+					<a href="#schedule">일정 알아보기</a>
+				</div>
 			</nav>
 			<section class="dimmer">
 				<div class="dimmer__top"></div>
@@ -28,7 +32,7 @@
 						<p id="countdown-timer--small"></p>
 					</div>
 				</article>
-				<article class="content">
+				<article class="content" id="introduction">
 					<section class="content__text">
 						<h2 class="headline">Hello World</h2>
 						<p class="body">
@@ -48,32 +52,113 @@
 						<h2 class="headline">Contents</h2>
 					</section>
 					<section class="list__wrapper">
-						<a href="#schedule" class="list__item">
+						<a href="#activity" class="list__item">
 							<div class="list__heading">
 								<p>1</p>
-								<p>Schedule</p>
+								<p>행사 안내</p>
 							</div>
 							<div class="list__icon"></div>
 						</a>
-						<a href="#information" class="list__item">
+						<a href="#schedule" class="list__item">
 							<div class="list__heading">
 								<p>2</p>
-								<p>Information</p>
-							</div>
-							<div class="list__icon"></div>
-						</a>
-						<a href="#contents" class="list__item">
-							<div class="list__heading">
-								<p>3</p>
-								<p>Contents</p>
+								<p>여행 일정</p>
 							</div>
 							<div class="list__icon"></div>
 						</a>
 					</section>
 				</article>
-				<article class="content" id="schedule">
+				<article class="content" id="activity">
 					<section class="content__text text--centered">
 						<p class="caption">01</p>
+						<h2 class="headline">행사 안내</h2>
+					</section>
+					<section class="activities">
+						<section class="activity">
+							<div class="activity__headings">
+								<p class="activity__text--caption">01</p>
+								<h2 class="activity__text--healine">딸기 시루 먹기</h2>
+							</div>
+							<div class="activity__contents">
+								<img src="" class="activity__graphic" />
+								<section class="activity__description">
+									<p class="activity__text--body">딸기 시루 먹기</p>
+								</section>
+							</div>
+						</section>
+						<section class="activity">
+							<div class="activity__headings">
+								<p class="activity__text--caption">01</p>
+								<h2 class="activity__text--healine">한밭수목원 가기</h2>
+							</div>
+							<div class="activity__contents">
+								<img src="" class="activity__graphic" />
+								<section class="activity__description">
+									<p class="activity__text--body">곤충보고 뭐하고 좋습니다</p>
+								</section>
+							</div>
+						</section>
+						<section class="activity">
+							<div class="activity__headings">
+								<p class="activity__text--caption">01</p>
+								<h2 class="activity__text--healine">바베큐 파티</h2>
+							</div>
+							<div class="activity__contents">
+								<section class="activity__description">
+									<p class="activity__text--body">멋있는 모자가 있어요</p>
+								</section>
+							</div>
+						</section>
+						<section class="activity">
+							<div class="activity__headings">
+								<p class="activity__text--caption">01</p>
+								<h2 class="activity__text--healine">죽을 때까지 술 먹기</h2>
+							</div>
+							<div class="activity__contents">
+								<section class="activity__description">
+									<p class="activity__text--body">멋있는 모자가 있어요</p>
+								</section>
+							</div>
+						</section>
+						<section class="activity">
+							<div class="activity__headings">
+								<p class="activity__text--caption">01</p>
+								<h2 class="activity__text--healine">훈화 말씀</h2>
+							</div>
+							<div class="activity__contents">
+								<section class="activity__description">
+									<p class="activity__text--body">멋있는 모자가 있어요</p>
+								</section>
+							</div>
+						</section>
+						<section class="activity">
+							<div class="activity__headings">
+								<p class="activity__text--caption">01</p>
+								<h2 class="activity__text--healine">두근두근 상식 퀴즈</h2>
+							</div>
+							<div class="activity__contents">
+								<section class="activity__description">
+									<p class="activity__text--body">멋있는 모자가 있어요</p>
+								</section>
+							</div>
+						</section>
+						<section class="activity">
+							<div class="activity__headings">
+								<p class="activity__text--caption">01</p>
+								<h2 class="activity__text--healine">우당탕탕 굿즈</h2>
+							</div>
+							<div class="activity__contents">
+								<section class="activity__description">
+									<p class="activity__text--body">멋있는 모자가 있어요</p>
+								</section>
+							</div>
+						</section>
+					</section>
+				</article>
+				<!-- Activity -->
+				<article class="content" id="schedule">
+					<section class="content__text text--centered">
+						<p class="caption">02</p>
 						<h2 class="headline">여행 일정</h2>
 					</section>
 					<ol class="carousel__headings">
@@ -494,45 +579,7 @@
 						</section>
 					</section>
 				</article>
-
-				<article class="content" id="information">
-					<section class="content__text text--centered">
-						<p class="caption">02</p>
-						<h2 class="headline">Information</h2>
-					</section>
-					<section class="rail__btns">
-						<button class="rail__button">B</button>
-						<button class="rail__button">S</button>
-						<button class="rail__button">K</button>
-						<div class="rail__buttonBGs">
-							<div class="rail__buttonBG rail__buttonBG--actived"></div>
-							<div class="rail__buttonBG"></div>
-							<div class="rail__buttonBG"></div>
-						</div>
-					</section>
-					<section class="rail">
-						<ul class="rail__container">
-							<li class="rail__item">
-								<h3>1</h3>
-								<ul>
-									Address
-								</ul>
-							</li>
-							<li class="rail__item">
-								<h3>2</h3>
-								<ul>
-									Address
-								</ul>
-							</li>
-							<li class="rail__item">
-								<h3>3</h3>
-								<ul>
-									Address
-								</ul>
-							</li>
-						</ul>
-					</section>
-				</article>
+				<!-- Schedule -->
 			</main>
 		</div>
 	</body>

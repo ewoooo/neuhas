@@ -166,11 +166,30 @@ window.addEventListener("DOMContentLoaded", () => {
 			dimmerTop.classList.remove("dimmer--unwrapped");
 		}
 	});
+});
 
-	const navBtn = document.querySelector(".navigation__button");
-	const navContent = document.querySelector(".navigation__content");
-	navBtn.addEventListener("click", () => {
-		navContent.classList.toggle("navigation__content--unwrapped");
+window.addEventListener("DOMContentLoaded", () => {
+	const list = document.querySelectorAll(".list__container");
+	const activities = document.querySelectorAll(".activity");
+	const animatedAssets = [...list, ...activities];
+
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add("is-uncovered");
+				} else {
+					entry.target.classList.remove("is-uncovered");
+				}
+			});
+		},
+		{
+			threshold: 0.5,
+		}
+	);
+
+	animatedAssets.forEach((tag) => {
+		observer.observe(tag);
 	});
 });
 
@@ -188,4 +207,39 @@ window.addEventListener("DOMContentLoaded", () => {
 			element.appendChild(img);
 		});
 	}
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+	const navContent = document.querySelector(".navigation__content");
+	const navBtn = document.querySelector(".navigation__button");
+
+	//initial show
+	setTimeout(() => {
+		navContent.classList.remove("navigation__content--unwrapped");
+		navBtn.classList.add("is-wiggle");
+	}, 2000);
+
+	window.addEventListener("click", (e) => {
+		if (e.target !== navContent && e.target !== navBtn) {
+			navContent.classList.remove("navigation__content--unwrapped");
+			navBtn.classList.add("is-wiggle");
+		}
+	});
+
+	//button Event
+	navBtn.addEventListener("click", () => {
+		navContent.classList.toggle("navigation__content--unwrapped");
+		navBtn.classList.toggle("is-wiggle");
+	});
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+	const activityNumbers = document.querySelectorAll(".activity__text--caption");
+	console.log(activityNumbers);
+
+	let count = 1;
+	activityNumbers.forEach((number) => {
+		number.textContent = `0${count}`;
+		count++;
+	});
 });
