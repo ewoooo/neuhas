@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href=stylesheet.css" />
+		<script src="script.js" defer></script>
+		<title>Title</title>
+		<meta name="description" content="Event Page for celebrate the 4th trip of Neuhas, Busan" />
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="header__title">Title</h1>
+			<p class="header__caption">Subtitle</p>
+		</header>
+		<div id="wrapper">
+			<nav class="navigation__container">
+				<button class="navigation navigation__button navigation__elem">!</button>
+				<div class="navigation navigation__content">lorem Ipsum</div>
+			</nav>
+			<section class="dimmer">
+				<div class="dimmer__top"></div>
+			</section>
+			<main>
+				<article class="countdown">
+					<div class="countdown__heading"><span id="countdown-timer--large"></span></div>
+					<div class="countdown__content">
+						<p id="countdown-timer--small"></p>
+					</div>
+				</article>
+				<article class="content">
+					<section class="content__text">
+						<h2 class="headline">Hello World</h2>
+						<p class="body">
+							Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+							architecto beatae vitae dicta sunt explicabo.
+						</p>
+						<p class="body">
+							Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
+							quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+							voluptatem.
+						</p>
+						<p class="body">Unknown, <br />2025</p>
+					</section>
+				</article>
+				<article class="content">
+					<section class="content__text">
+						<h2 class="headline">Contents</h2>
+					</section>
+					<section class="list__wrapper">
+						<a href="#schedule" class="list__item">
+							<div class="list__heading">
+								<p>1</p>
+								<p>Schedule</p>
+							</div>
+							<div class="list__icon"></div>
+						</a>
+						<a href="#information" class="list__item">
+							<div class="list__heading">
+								<p>2</p>
+								<p>Information</p>
+							</div>
+							<div class="list__icon"></div>
+						</a>
+						<a href="#contents" class="list__item">
+							<div class="list__heading">
+								<p>3</p>
+								<p>Contents</p>
+							</div>
+							<div class="list__icon"></div>
+						</a>
+					</section>
+				</article>
+				<article class="content" id="schedule">
+					<section class="content__text text--centered">
+						<p class="caption">01</p>
+						<h2 class="headline">여행 일정</h2>
+					</section>
+					<ol class="carousel__headings">
+						<button class="carousel__btn carousel__btn--preseed" data-index="0">금요일</button>
+						<button class="carousel__btn" data-index="1">토요일</button>
+						<button class="carousel__btn" data-index="2">일요일</button>
+					</ol>
+					<section class="carousel">
+						<section class="carousel__container carousel__container--transition">
+							<ol class="carousel__list">
+								<li class="list__container">
+									<section class="list__head">
+										<div class="list__headItem">
+											<p class="list__subhead">정오</p>
+											<p class="list__header">도착</p>
+										</div>
+										<div class="list__chipStack">
+											<span class="list__chip list__chip--head">대전역</span>
+										</div>
+									</section>
+									<section class="list__trail">
+										<div class="list__trailItem">
+											<div class="list__trailHead">
+												<p class="list__header">김유민, 이지영, 이우성</p>
+											</div>
+										</div>
+									</section>
+								</li>
+								<li class="list__container">
+									<section class="list__head">
+										<div class="list__headItem">
+											<p class="list__subhead">오후 1시</p>
+											<p class="list__header">점심 식사</p>
+										</div>
+										<div class="list__chipStack">
+											<a href="" target="_blank">
+												<span class="list__chip list__chip--head">광천 식당</span>
+												<span class="list__chip list__chip--head list__chip--link"></span>
+											</a>
+										</div>
+									</section>
+								</li>
+								<li class="list__container">
+									<section class="list__head">
+										<div class="list__headItem">
+											<p class="list__subhead">오후 2시</p>
+											<p class="list__header">베이커리 투어</p>
+										</div>
+									</section>
+									<section class="list__trail">
+										<div class="list__trailItem">
+											<section class="list_trailHead">
+												<p class="list__content">덩그레스 먹기</p>
+											</section>
+											<section class="list__chipStack">
+												<a href=" " target="_blank">
+													<span class="list__chip list__chip--trail">오븐브라더스</span>
+													<span class="list__chip list__chip--trail list__chip--link"></span>
+												</a>
+											</section>
+										</div>
+										<div class="list__trailItem">
+											<section class="list_trailHead">
+												<p class="list__content">딸기 시루 먹기</p>
+											</section>
+											<section class="list__chipStack">
+												<a href="" target="_blank">
+													<span class="list__chip list__chip--trail">성심당 케익 부띠끄</span>
+													<span class="list__chip list__chip--trail list__chip--link"></span>
+												</a>
+											</section>
+										</div>
+										<div class="list__trailItem">
+											<section class="list_trailHead">
+												<p class="list__content">튀김 소보루 먹기</p>
+											</section>
+											<section class="list__chipStack">
+												<a href="" target="_blank">
+													<span class="list__chip list__chip--trail">성심당 본점</span>
+													<span class="list__chip list__chip--trail list__chip--link"></span>
+												</a>
+											</section>
+										</div>
+									</section>
+								</li>
+								<li class="list__container">
+									<section class="list__head">
+										<div class="list__headItem">
+											<p class="list__subhead">오후 5시</p>
+											<p class="list__header">숙소 이동</p>
+										</div>
+										<section class="list__chipStack">
+											<a href="" target="_blank">
+												<span class="list__chip list__chip--head">계룡산 펜션</span>
+												<span class="list__chip list__chip--head list__chip--link"></span>
+												<span class="list__chip list__chip--head">1시간 20분</span>
+											</a>
+										</section>
+									</section>
+								</li>
+								<li class="list__container">
+									<section class="list__head">
+										<div class="list__headItem">
+											<p class="list__subhead">오후 6시 30분</p>
+											<p class="list__header">체크인 & 휴식</p>
+										</div>
+									</section>
+								</li>
+								<li class="list__container">
+									<section class="list__head">
+										<div class="list__headItem">
+											<p class="list__subhead">오후 7시 30분</p>
+											<p class="list__header">저녁 식사</p>
+										</div>
+										<section class="list__chipStack">
+											<span class="list__chip list__chip--head">바베큐</span>
+										</section>
+									</section>
+								</li>
+								<li class="list__container">
+									<section class="list__head">
+										<div class="list__headItem">
+											<p class="list__subhead">오후 8시 30분</p>
+											<p class="list__header">프로젝트 발표</p>
+										</div>
+									</section>
+									<section class="list__trail">
+										<div class="list__trailItem">
+											<section class="list_trailHead">
+												<p class="list__content">Gen X Soft Club</p>
+											</section>
+											<section class="list__chipStack">
+												<span class="list__chip list__chip--trail">뉴하스빌 3층</span>
+											</section>
+										</div>
+										<div class="list__trailItem">
+											<section class="list_trailHead">
+												<p class="list__content">Bell Express</p>
+											</section>
+											<section class="list__chipStack">
+												<span class="list__chip list__chip--trail">뉴하스빌 4층</span>
+											</section>
+										</div>
+										<div class="list__trailItem">
+											<section class="list_trailHead">
+												<p class="list__content">2025 Neuhas</p>
+											</section>
+											<section class="list__chipStack">
+												<span class="list__chip list__chip--trail">운영</span>
+											</section>
+										</div>
+									</section>
+								</li>
+								<li class="list__container">
+									<section class="list__head">
+										<div class="list__headItem">
+											<p class="list__subhead">오후 9시 30분</p>
+											<p class="list__header">야유회</p>
+										</div>
+									</section>
+									<section class="list__trail">
+										<div class="list__trailItem">
+											<section class="list_trailHead">
+												<p class="list__content">두근두근 상식퀴즈</p>
+											</section>
+											<section class="list__chipStack">
+												<span class="list__chip list__chip--trail">한서연</span>
+											</section>
+										</div>
+										<div class="list__trailItem">
+											<section class="list_trailHead">
+												<p class="list__content">초고교급 디자이너 <br />'김은수' 초청식</p>
+											</section>
+										</div>
+										<div class="list__trailItem">
+											<section class="list_trailHead">
+												<p class="list__content">행사 2</p>
+											</section>
+											<section class="list__chipStack">
+												<span class="list__chip list__chip--trail">이지영</span>
+											</section>
+										</div>
+									</section>
+								</li>
+							</ol>
+							<!-- Second -->
+							<ol class="carousel__list">
+								<li class="list__container">
+									<section class="list__head">
+										<div class="list__headItem">
+											<p class="list__subhead">오전 10시</p>
+											<p class="list__header">기상</p>
+										</div>
+									</section>
+								</li>
+								<li class="list__container">
+									<!-- Head -->
+									<section class="list__head">
+										<div class="list__headItem">
+											<p class="list__subhead">오전 10시 30분</p>
+											<p class="list__header">시내 이동</p>
+										</div>
+										<section class="list__chipStack">
+											<a href="" target="_blank">
+												<span class="list__chip list__chip--head">탄방역</span>
+												<span class="list__chip list__chip--head list__chip--link"></span>
+												<span class="list__chip list__chip--head">1시간</span>
+											</a>
+										</section>
+									</section>
+								</li>
+								<li class="list__container">
+									<!-- Head -->
+									<section class="list__head">
+										<div class="list__headItem">
+											<p class="list__subhead">정오</p>
+											<p class="list__header">점심식사</p>
+										</div>
+										<p class="list__alert">
+											<span class="list__alertSymbol"></span>
+											대기시간 있음
+										</p>
+									</section>
+									<!-- Trail -->
+									<section class="list__trail">
+										<!-- <div class="list__trailItem">
+											<section class="list_trailHead">
+												<p class="list__content">중식</p>
+											</section>
+											<section class="list__chipStack">
+												<a href=" " target="_blank">
+													<span class="list__chip list__chip--trail">조기종의 향미각</span>
+													<span class="list__chip list__chip--trail list__chip--link"></span>
+												</a>
+											</section>
+										</div> -->
+										<div class="list__trailItem">
+											<section class="list_trailHead">
+												<p class="list__content">칼국수 <span class="list__alertSymbol"></span></p>
+											</section>
+											<section class="list__chipStack">
+												<a href="" target="_blank">
+													<span class="list__chip list__chip--trail">대선 칼국수</span>
+													<span class="list__chip list__chip--trail list__chip--link"></span>
+												</a>
+											</section>
+										</div>
+										<div class="list__trailItem">
+											<section class="list_trailHead">
+												<p class="list__content">아구찜과 칼국수 <span class="list__alertSymbol"></span></p>
+											</section>
+											<section class="list__chipStack">
+												<a href="" target="_blank">
+													<span class="list__chip list__chip--trail">왕실전골아구찜</span>
+													<span class="list__chip list__chip--trail list__chip--link"></span>
+												</a>
+											</section>
+										</div>
+									</section>
+								</li>
+								<li class="list__container">
+									<!-- Head -->
+									<section class="list__head">
+										<div class="list__headItem">
+											<p class="list__subhead">오후 2시</p>
+											<p class="list__header">수목원 투어</p>
+										</div>
+										<section class="list__chipStack">
+											<a href="" target="_blank">
+												<span class="list__chip list__chip--head">한밭수목원</span>
+												<span class="list__chip list__chip--head list__chip--link"></span>
+												<span class="list__chip list__chip--head">20분</span>
+												<span class="list__chip list__chip--head">택시</span>
+											</a>
+										</section>
+									</section>
+								</li>
+								<li class="list__container">
+									<!-- Head -->
+									<section class="list__head">
+										<div class="list__headItem">
+											<p class="list__subhead">오후 5시</p>
+											<p class="list__header">카페 투어</p>
+										</div>
+										<p class="list__alert">
+											<span class="list__alertSymbol"></span>
+											대기시간 있음
+										</p>
+									</section>
+									<!-- Trail -->
+									<section class="list__trail">
+										<div class="list__trailItem">
+											<section class="list_trailHead">
+												<p class="list__content">칼국수</p>
+											</section>
+											<section class="list__chipStack">
+												<a href="" target="_blank">
+													<span class="list__chip list__chip--trail">프레생제르베</span>
+													<span class="list__chip list__chip--trail list__chip--link"></span>
+												</a>
+											</section>
+										</div>
+										<div class="list__trailItem">
+											<section class="list_trailHead">
+												<p class="list__content">칼국수</p>
+											</section>
+											<section class="list__chipStack">
+												<a href="" target="_blank">
+													<span class="list__chip list__chip--trail">캘리포니아 베이커리</span>
+													<span class="list__chip list__chip--trail list__chip--link"></span>
+												</a>
+											</section>
+										</div>
+										<div class="list__trailItem">
+											<section class="list_trailHead">
+												<p class="list__content">칼국수</p>
+											</section>
+											<section class="list__chipStack">
+												<a href="" target="_blank">
+													<span class="list__chip list__chip--trail">빅필드</span>
+													<span class="list__chip list__chip--trail list__chip--link"></span>
+												</a>
+											</section>
+										</div>
+									</section>
+								</li>
+								<li class="list__container">
+									<!-- Head -->
+									<section class="list__head">
+										<div class="list__headItem">
+											<p class="list__subhead">오후 6시</p>
+											<p class="list__header">저녁 식사</p>
+										</div>
+										<section class="list__chipStack">
+											<a href="" target="_blank">
+												<span class="list__chip list__chip--head">조기종의 향미각</span>
+												<span class="list__chip list__chip--head list__chip--link"></span>
+												<span class="list__chip list__chip--head">!</span>
+											</a>
+										</section>
+									</section>
+								</li>
+								<li class="list__container">
+									<!-- Head -->
+									<section class="list__head">
+										<div class="list__headItem">
+											<p class="list__subhead">오후 7시</p>
+											<p class="list__header">숙소 이동</p>
+										</div>
+										<section class="list__chipStack">
+											<a href="" target="_blank">
+												<span class="list__chip list__chip--head">계룡산 펜션</span>
+												<span class="list__chip list__chip--head list__chip--link"></span>
+												<span class="list__chip list__chip--head">1시간</span>
+											</a>
+										</section>
+									</section>
+								</li>
+								<li class="list__container">
+									<!-- Head -->
+									<section class="list__head">
+										<div class="list__headItem">
+											<p class="list__subhead">오후 8시</p>
+											<p class="list__header">자유</p>
+										</div>
+									</section>
+								</li>
+							</ol>
+							<ol class="carousel__list">
+								<li class="list__container">
+									<section class="list__head">
+										<div class="list__headItem">
+											<p class="list__subhead">오전 10시</p>
+											<p class="list__header">기상</p>
+										</div>
+									</section>
+								</li>
+								<li class="list__container">
+									<!-- Head -->
+									<section class="list__head">
+										<div class="list__headItem">
+											<p class="list__subhead">오전 11시</p>
+											<p class="list__header">숙소 퇴실 & 이동</p>
+										</div>
+										<section class="list__chipStack">
+											<span class="list__chip list__chip--head">1시간 10분</span>
+										</section>
+									</section>
+								</li>
+								<li class="list__container">
+									<!-- Head -->
+									<section class="list__head">
+										<div class="list__headItem">
+											<p class="list__subhead">정오</p>
+											<p class="list__header">해산</p>
+										</div>
+									</section>
+									<!-- Trail -->
+									<section class="list__trail">
+										<div class="list__trailItem">
+											<section class="list_trailHead">
+												<p class="list__content">또 빵먹어?</p>
+											</section>
+											<section class="list__chipStack">
+												<a href="" target="_blank">
+													<span class="list__chip list__chip--trail">챔프스페이스</span>
+													<span class="list__chip list__chip--trail list__chip--link"></span>
+												</a>
+											</section>
+										</div>
+									</section>
+								</li>
+								<li class="list__closure">
+									<img src="src/rabbit_test.svg" alt="" />
+									<p>또 만나요!</p>
+								</li>
+							</ol>
+						</section>
+					</section>
+				</article>
+
+				<article class="content" id="information">
+					<section class="content__text text--centered">
+						<p class="caption">02</p>
+						<h2 class="headline">Information</h2>
+					</section>
+					<section class="rail__btns">
+						<button class="rail__button">B</button>
+						<button class="rail__button">S</button>
+						<button class="rail__button">K</button>
+						<div class="rail__buttonBGs">
+							<div class="rail__buttonBG rail__buttonBG--actived"></div>
+							<div class="rail__buttonBG"></div>
+							<div class="rail__buttonBG"></div>
+						</div>
+					</section>
+					<section class="rail">
+						<ul class="rail__container">
+							<li class="rail__item">
+								<h3>1</h3>
+								<ul>
+									Address
+								</ul>
+							</li>
+							<li class="rail__item">
+								<h3>2</h3>
+								<ul>
+									Address
+								</ul>
+							</li>
+							<li class="rail__item">
+								<h3>3</h3>
+								<ul>
+									Address
+								</ul>
+							</li>
+						</ul>
+					</section>
+				</article>
+			</main>
+		</div>
+	</body>
+</html>
