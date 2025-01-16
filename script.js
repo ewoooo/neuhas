@@ -94,16 +94,16 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	carousel.addEventListener("touchend", (e) => {
 		let dist = 0;
-		let threshold = 40;
+		let threshold = 130;
 
 		e.preventDefault();
 		endPos = e.changedTouches[0].clientX;
 		dist = startPos - endPos;
 
-		if (dist >= threshold) {
+		if (dist >= Number(threshold)) {
 			curIndex++;
 			slideTo(curIndex);
-		} else if (dist <= threshold * -1) {
+		} else if (dist <= Number(threshold * -1)) {
 			curIndex--;
 			slideTo(curIndex);
 		}
@@ -125,16 +125,16 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	carousel.addEventListener("mouseup", (e) => {
 		let dist = 0;
-		let threshold = 30;
+		let threshold = 80;
 
 		e.preventDefault();
 		endPos = e.clientX;
-		dist = startPos - endPos;
+		dist = Number(startPos - endPos);
 
-		if (dist >= threshold) {
+		if (dist >= Number(threshold)) {
 			curIndex++;
 			slideTo(curIndex);
-		} else if (dist <= threshold * -1) {
+		} else if (dist <= Number(threshold * -1)) {
 			curIndex--;
 			slideTo(curIndex);
 		}
