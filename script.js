@@ -84,11 +84,42 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	// initial
 	carousel.style.transform = `translateX(${-(curIndex + 1) * 100}%)`;
-	carousel.addEventListener("pointerdown", (e) => {
+	carousel.addEventListener("touchstart", (e) => {
+		startPos = e.touches[0].clientX;
+	});
+
+	carousel.addEventListener("touchend", (e) => {
+		let dist = 0;
+		let threshold = 10;
+
+		e.preventDefault();
+		endPos = e.changedTouches[0].clientX;
+		dist = startPos - endPos;
+
+		if (dist >= threshold) {
+			curIndex++;
+			slideTo(curIndex);
+		} else if (dist <= threshold * -1) {
+			curIndex--;
+			slideTo(curIndex);
+		}
+
+		if (curIndex < 0) {
+			curIndex = lastIndex - 2;
+			resetSlide();
+		} else if (curIndex >= lastIndex - 1) {
+			curIndex = 0;
+			resetSlide();
+		}
+		updateBtn(curIndex);
+		console.log(dist);
+	});
+
+	carousel.addEventListener("mousedown", (e) => {
 		startPos = e.clientX;
 	});
 
-	carousel.addEventListener("pointerup", (e) => {
+	carousel.addEventListener("mouseup", (e) => {
 		let dist = 0;
 		let threshold = 30;
 

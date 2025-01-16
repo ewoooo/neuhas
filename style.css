@@ -575,14 +575,23 @@ a {
 	transition: all ease 500ms;
 }
 
+.activity--main {
+	border: 1px solid #ff6d83;
+	background-color: #000;
+}
+
 .activity__graphic {
 	display: block;
 	height: 200px;
-	aspect-ratio: 2 / 3;
+	aspect-ratio: 1 / 1;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	width: 100%;
 	margin-bottom: 12px;
+}
+
+.activity__graphic--isMoving {
+	aspect-ratio: 1 / 1;
 }
 
 /* State */
