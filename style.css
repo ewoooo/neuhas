@@ -592,11 +592,6 @@ a {
 	transition: all ease 500ms;
 }
 
-.activity--main {
-	border: 1px solid #ff6d83;
-	background-color: #000;
-}
-
 .activity__graphic {
 	display: block;
 	height: 200px;
