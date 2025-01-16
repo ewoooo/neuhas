@@ -309,7 +309,7 @@ a {
 .countdown__img {
 	width: 300px;
 	height: 300px;
-	margin-bottom: 40px;
+	margin-bottom: -20px;
 }
 
 .countdown__img--mini {
@@ -704,6 +704,10 @@ a {
 
 .is-wiggle {
 	animation: 500ms ease infinite alternate wiggle;
+}
+
+.is-popped {
+	background: linear-gradient(0deg, rgba(234, 91, 113, 1) 0%, rgba(0, 0, 0, 1) 50%);
 }
 
 @keyframes wiggle {

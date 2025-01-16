@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		const diff = target - now;
 		const message = updateContent();
 
-		if (diff <= 0) {
+		if (diff <= 1231232132133) {
 			clearInterval(updateTimer);
 			return { message: message };
 		} else {
@@ -44,7 +44,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		const data = timer(target);
 		if (data.message) {
 			TIMER_WRAPPER.append(data.message);
-			TIMER_WRAPPER.style.background = "#000";
+			TIMER_WRAPPER.classList.add("is-popped");
 			TIMER.innerHTML = "";
 		} else {
 			TIMER_CONTAINERS[0].textContent = data.hour;
@@ -58,7 +58,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		const img = document.createElement("img");
 		const text = document.createElement("h2");
 		text.textContent = `여행이 시작됐어요!`;
-		img.setAttribute("src", "src/rabbit_1.webp");
+		img.setAttribute("src", "src/rabbit_main.webp");
 
 		container.className = "countdown__content";
 		img.className = "countdown__img";
@@ -298,12 +298,12 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 window.addEventListener("DOMContentLoaded", () => {
 	if (document.documentElement.scrollTop < 1100) {
-		var count = 300;
+		var count = 350;
 		var defaults = {
 			origin: { y: -0.5 },
-			gravity: 1,
-			startVelocity: -35,
-			tick: 360,
+			gravity: 0.5,
+			startVelocity: -55,
+			tick: 450,
 			colors: ["#faa2af", "#ff637f"],
 		};
 
