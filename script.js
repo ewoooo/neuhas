@@ -94,7 +94,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	carousel.addEventListener("touchend", (e) => {
 		let dist = 0;
-		let threshold = 10;
+		let threshold = 40;
 
 		e.preventDefault();
 		endPos = e.changedTouches[0].clientX;
