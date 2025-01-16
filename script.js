@@ -193,8 +193,6 @@ window.addEventListener("DOMContentLoaded", () => {
 			(entry) => {
 				if (entry.isIntersecting) {
 					entry.target.classList.add("is-visible");
-				} else {
-					entry.target.classList.remove("is-visible");
 				}
 			},
 			{
@@ -224,13 +222,12 @@ window.addEventListener("DOMContentLoaded", () => {
 	const observer = new IntersectionObserver(
 		(entries) => {
 			entries.forEach((entry) => {
-				let count = 0;
 				if (entry.isIntersecting) {
 					entry.target.classList.add("is-uncovered");
 				} else {
-					setTimeout(() => {
-						entry.target.classList.remove("is-uncovered");
-					}, 500);
+					// setTimeout(() => {
+					// 	entry.target.classList.remove("is-uncovered");
+					// }, 500);
 				}
 			});
 		},

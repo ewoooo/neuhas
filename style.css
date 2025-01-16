@@ -100,7 +100,7 @@ dd {
 	--color-text-3: #212121;
 	--color-text-green: #438d26;
 	--color-text-lightGray: #969696;
-	--color-red: #ff637a;
+	--color-red: #ea5b71;
 	--color-red--light: #faa2af;
 	--color-red--dark: #4b0a0a;
 }
@@ -651,6 +651,44 @@ a {
 	& .headline {
 		color: var(--color-red--light);
 	}
+}
+
+#credit {
+	display: flex;
+	flex-flow: column wrap;
+	margin-top: 200px;
+
+	border-top: 1px solid var(--color-text-3);
+	padding-top: 8px;
+}
+
+.credit__blocks {
+	display: flex;
+}
+
+.credit__block {
+	flex: 1;
+}
+
+.credit__block--captions {
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.credit__text--caption {
+	color: var(--color-text-2);
+}
+
+.credit__text--subhead {
+	color: var(--color-text-lightGray);
+}
+
+.credit__headings {
+	margin-bottom: 24px;
+}
+
+.credit {
+	margin-bottom: 8px;
 }
 
 /* State */
