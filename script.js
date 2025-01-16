@@ -224,15 +224,18 @@ window.addEventListener("DOMContentLoaded", () => {
 	const observer = new IntersectionObserver(
 		(entries) => {
 			entries.forEach((entry) => {
+				let count = 0;
 				if (entry.isIntersecting) {
 					entry.target.classList.add("is-uncovered");
 				} else {
-					entry.target.classList.remove("is-uncovered");
+					setTimeout(() => {
+						entry.target.classList.remove("is-uncovered");
+					}, 500);
 				}
 			});
 		},
 		{
-			threshold: 0.5,
+			threshold: 0.3,
 		}
 	);
 

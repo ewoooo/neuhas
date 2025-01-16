@@ -38,6 +38,8 @@ blockquote,
 dl,
 dd {
 	margin-block-end: 0;
+	line-break: break-all;
+	text-wrap: balance;
 }
 
 :where(html, body) {
@@ -253,7 +255,6 @@ a {
 	/* margin: 16px; */
 	background: linear-gradient(0deg, rgba(250, 162, 175, 1) 5%, rgba(176, 110, 110, 1) 20%, rgba(0, 0, 0, 1) 50%);
 	border-radius: 32px;
-
 	display: flex;
 	max-height: 812px;
 	flex-flow: column wrap;
@@ -275,10 +276,12 @@ a {
 	font-size: 60px;
 	font-weight: 800;
 	line-height: 60px;
+
 	> span {
 		position: relative;
 		top: -4px;
 		margin-right: 4px;
+		color: var(--color-red);
 	}
 }
 
@@ -286,8 +289,11 @@ a {
 	padding-top: 40px;
 }
 
-.countdown-timer--container {
+.countdown-timer--container:nth-last-child(1) {
 	width: 80px;
+}
+.countdown-timer--container {
+	color: var(--color-red--light);
 }
 
 .countdown__content {
@@ -325,7 +331,7 @@ a {
 
 .body {
 	font-size: 16px;
-	line-height: 20px;
+	line-height: 24px;
 	margin-bottom: 20px;
 }
 
@@ -576,6 +582,14 @@ a {
 	align-items: center;
 	gap: 8px;
 	color: var(--color-red);
+
+	> p {
+		color: var(--color-text-2);
+	}
+}
+
+.list__graphic {
+	width: 50%;
 }
 
 .symbol__link {
@@ -615,12 +629,28 @@ a {
 
 .activity__graphic {
 	display: block;
-	height: 200px;
 	aspect-ratio: 1 / 1;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	margin: 0 auto;
+	padding-bottom: 40px;
+	padding-top: 40px;
+	width: 90%;
+	margin-bottom: 42px;
+}
+
+.activity__graphic--isMoving {
+	display: block;
+	aspect-ratio: 1 / 1;
+	padding-top: -120px;
 	width: 100%;
 	margin-bottom: 12px;
+}
+
+#introduction {
+	margin-top: 50px;
+	margin-bottom: 100px;
+	& .headline {
+		color: var(--color-red--light);
+	}
 }
 
 /* State */
