@@ -4,14 +4,15 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
+		<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 		<script src="script.js" defer></script>
-		<title>Title</title>
+		<title>뉴하스 네번째 워크샵</title>
 		<meta name="description" content="Event Page for celebrate the 4th trip of Neuhas, Busan" />
 	</head>
 	<body>
 		<header class="header">
-			<h1 class="header__title">Title</h1>
-			<p class="header__caption">Subtitle</p>
+			<h1 class="header__title">대전으로 가요</h1>
+			<p class="header__caption">뉴하스 네번째 워크샵</p>
 		</header>
 		<div id="wrapper">
 			<nav class="navigation__container">
@@ -25,31 +26,25 @@
 			<section class="dimmer">
 				<div class="dimmer__top"></div>
 			</section>
+
 			<main>
 				<article class="countdown">
-					<div class="countdown__heading"><span id="countdown-timer--large"></span></div>
-					<div class="countdown__content">
-						<p id="countdown-timer--small"></p>
-					</div>
+					<section class="countdown__heading">
+						<img src="src/rabbit_1.webp" class="countdown__img countdown__img--mini" />
+						<div id="countdown-timer--large"></div>
+						<p>시작까지</p>
+					</section>
 				</article>
 				<article class="content" id="introduction">
 					<section class="content__text">
-						<h2 class="headline">Hello World</h2>
-						<p class="body">
-							Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-							architecto beatae vitae dicta sunt explicabo.
-						</p>
-						<p class="body">
-							Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-							quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-							voluptatem.
-						</p>
-						<p class="body">Unknown, <br />2025</p>
+						<h2 class="headline">안녕하세요</h2>
+						<p class="body">1월 17일 정오에 만나요!</p>
+						<p class="body">뉴하스 <br />2025</p>
 					</section>
 				</article>
 				<article class="content">
 					<section class="content__text">
-						<h2 class="headline">Contents</h2>
+						<h2 class="headline">목차</h2>
 					</section>
 					<section class="list__wrapper">
 						<a href="#activity" class="list__item">
@@ -80,9 +75,9 @@
 								<h2 class="activity__text--healine">딸기 시루 먹기</h2>
 							</div>
 							<div class="activity__contents">
-								<img src="" class="activity__graphic" />
+								<img src="src/rabbit_eat.svg" class="activity__graphic" />
 								<section class="activity__description">
-									<p class="activity__text--body">딸기 시루 먹기</p>
+									<p class="activity__text--body">딸기 8층 석탑을 보신적이 있으신가요?</p>
 								</section>
 							</div>
 						</section>
@@ -92,9 +87,8 @@
 								<h2 class="activity__text--healine">한밭수목원 가기</h2>
 							</div>
 							<div class="activity__contents">
-								<img src="" class="activity__graphic" />
 								<section class="activity__description">
-									<p class="activity__text--body">곤충보고 뭐하고 좋습니다</p>
+									<p class="activity__text--body">곤충도 있대요</p>
 								</section>
 							</div>
 						</section>
@@ -105,7 +99,7 @@
 							</div>
 							<div class="activity__contents">
 								<section class="activity__description">
-									<p class="activity__text--body">멋있는 모자가 있어요</p>
+									<p class="activity__text--body">추운데 참고 구워요</p>
 								</section>
 							</div>
 						</section>
@@ -115,8 +109,21 @@
 								<h2 class="activity__text--healine">죽을 때까지 술 먹기</h2>
 							</div>
 							<div class="activity__contents">
+								<img src="src/rabbit_smile.svg" class="activity__graphic" />
 								<section class="activity__description">
-									<p class="activity__text--body">멋있는 모자가 있어요</p>
+									<p class="activity__text--body">한번도 이뤄진 적은 없어요</p>
+								</section>
+							</div>
+						</section>
+						<section class="activity">
+							<div class="activity__headings">
+								<p class="activity__text--caption">01</p>
+								<h2 class="activity__text--healine">뉴하스빌 발표</h2>
+							</div>
+							<div class="activity__contents">
+								<img src="src/rabbit_crying.svg" class="activity__graphic" />
+								<section class="activity__description">
+									<p class="activity__text--body">정말 고생을 많이 했어요</p>
 								</section>
 							</div>
 						</section>
@@ -127,7 +134,18 @@
 							</div>
 							<div class="activity__contents">
 								<section class="activity__description">
-									<p class="activity__text--body">멋있는 모자가 있어요</p>
+									<p class="activity__text--body">정치인이 아니어서 다행일 거에요</p>
+								</section>
+							</div>
+						</section>
+						<section class="activity">
+							<div class="activity__headings">
+								<p class="activity__text--caption">01</p>
+								<h2 class="activity__text--healine">상장 수여식</h2>
+							</div>
+							<div class="activity__contents">
+								<section class="activity__description">
+									<p class="activity__text--body">누가 상을 받을까요?</p>
 								</section>
 							</div>
 						</section>
@@ -137,8 +155,20 @@
 								<h2 class="activity__text--healine">두근두근 상식 퀴즈</h2>
 							</div>
 							<div class="activity__contents">
+								<img src="src/rabbit_salty.svg" class="activity__graphic" />
 								<section class="activity__description">
-									<p class="activity__text--body">멋있는 모자가 있어요</p>
+									<p class="activity__text--body">지식을 뽐내고 바보들을 놀려봐요</p>
+								</section>
+							</div>
+						</section>
+						<section class="activity">
+							<div class="activity__headings">
+								<p class="activity__text--caption">01</p>
+								<h2 class="activity__text--healine">일심동체 초성 퀴즈</h2>
+							</div>
+							<div class="activity__contents">
+								<section class="activity__description">
+									<p class="activity__text--body">진정한 팀워크를 가려내요</p>
 								</section>
 							</div>
 						</section>
@@ -148,8 +178,9 @@
 								<h2 class="activity__text--healine">우당탕탕 굿즈</h2>
 							</div>
 							<div class="activity__contents">
+								<img src="src/rabbit_wink.svg" class="activity__graphic" />
 								<section class="activity__description">
-									<p class="activity__text--body">멋있는 모자가 있어요</p>
+									<p class="activity__text--body">주변에 자랑하고 싶어져요</p>
 								</section>
 							</div>
 						</section>
@@ -181,9 +212,28 @@
 									</section>
 									<section class="list__trail">
 										<div class="list__trailItem">
-											<div class="list__trailHead">
-												<p class="list__header">김유민, 이지영, 이우성</p>
-											</div>
+											<section class="list_trailHead">
+												<p class="list__content">김유민, 이지영, 이우성</p>
+											</section>
+											<section class="list__chipStack">
+												<span class="list__chip list__chip--trail">12시 02분</span>
+											</section>
+										</div>
+										<div class="list__trailItem">
+											<section class="list_trailHead">
+												<p class="list__content">전서연, 한서연, 윤서빈, 지해인</p>
+											</section>
+											<section class="list__chipStack">
+												<span class="list__chip list__chip--trail">12시 20분</span>
+											</section>
+										</div>
+										<div class="list__trailItem">
+											<section class="list_trailHead">
+												<p class="list__content">사나이 2인</p>
+											</section>
+											<section class="list__chipStack">
+												<span class="list__chip list__chip--trail">알아서</span>
+											</section>
 										</div>
 									</section>
 								</li>
@@ -194,7 +244,7 @@
 											<p class="list__header">점심 식사</p>
 										</div>
 										<div class="list__chipStack">
-											<a href="" target="_blank">
+											<a href="https://naver.me/GbDFQCo1" target="_blank">
 												<span class="list__chip list__chip--head">광천 식당</span>
 												<span class="list__chip list__chip--head list__chip--link"></span>
 											</a>
@@ -214,7 +264,7 @@
 												<p class="list__content">덩그레스 먹기</p>
 											</section>
 											<section class="list__chipStack">
-												<a href=" " target="_blank">
+												<a href="https://naver.me/xprA7TBp" target="_blank">
 													<span class="list__chip list__chip--trail">오븐브라더스</span>
 													<span class="list__chip list__chip--trail list__chip--link"></span>
 												</a>
@@ -225,7 +275,7 @@
 												<p class="list__content">딸기 시루 먹기</p>
 											</section>
 											<section class="list__chipStack">
-												<a href="" target="_blank">
+												<a href="https://naver.me/xWTnGVz9" target="_blank">
 													<span class="list__chip list__chip--trail">성심당 케익 부띠끄</span>
 													<span class="list__chip list__chip--trail list__chip--link"></span>
 												</a>
@@ -236,7 +286,7 @@
 												<p class="list__content">튀김 소보루 먹기</p>
 											</section>
 											<section class="list__chipStack">
-												<a href="" target="_blank">
+												<a href="https://naver.me/FTXwFWCx" target="_blank">
 													<span class="list__chip list__chip--trail">성심당 본점</span>
 													<span class="list__chip list__chip--trail list__chip--link"></span>
 												</a>
@@ -251,7 +301,7 @@
 											<p class="list__header">숙소 이동</p>
 										</div>
 										<section class="list__chipStack">
-											<a href="" target="_blank">
+											<a href="https://naver.me/5PVDA7Sy" target="_blank">
 												<span class="list__chip list__chip--head">계룡산 펜션</span>
 												<span class="list__chip list__chip--head list__chip--link"></span>
 												<span class="list__chip list__chip--head">1시간 20분</span>
@@ -335,7 +385,7 @@
 										</div>
 										<div class="list__trailItem">
 											<section class="list_trailHead">
-												<p class="list__content">행사 2</p>
+												<p class="list__content">우당탕탕 초성퀴즈</p>
 											</section>
 											<section class="list__chipStack">
 												<span class="list__chip list__chip--trail">이지영</span>
@@ -362,7 +412,7 @@
 											<p class="list__header">시내 이동</p>
 										</div>
 										<section class="list__chipStack">
-											<a href="" target="_blank">
+											<a href="https://naver.me/FS5qc3ck" target="_blank">
 												<span class="list__chip list__chip--head">탄방역</span>
 												<span class="list__chip list__chip--head list__chip--link"></span>
 												<span class="list__chip list__chip--head">1시간</span>
@@ -397,10 +447,10 @@
 										</div> -->
 										<div class="list__trailItem">
 											<section class="list_trailHead">
-												<p class="list__content">칼국수 <span class="list__alertSymbol"></span></p>
+												<p class="list__content">칼국수와 수육<span class="list__alertSymbol"></span></p>
 											</section>
 											<section class="list__chipStack">
-												<a href="" target="_blank">
+												<a href="https://naver.me/GrmadDsy" target="_blank">
 													<span class="list__chip list__chip--trail">대선 칼국수</span>
 													<span class="list__chip list__chip--trail list__chip--link"></span>
 												</a>
@@ -411,7 +461,7 @@
 												<p class="list__content">아구찜과 칼국수 <span class="list__alertSymbol"></span></p>
 											</section>
 											<section class="list__chipStack">
-												<a href="" target="_blank">
+												<a href="https://naver.me/5Q37ZzBc" target="_blank">
 													<span class="list__chip list__chip--trail">왕실전골아구찜</span>
 													<span class="list__chip list__chip--trail list__chip--link"></span>
 												</a>
@@ -427,7 +477,7 @@
 											<p class="list__header">수목원 투어</p>
 										</div>
 										<section class="list__chipStack">
-											<a href="" target="_blank">
+											<a href="https://naver.me/5z52fu6R" target="_blank">
 												<span class="list__chip list__chip--head">한밭수목원</span>
 												<span class="list__chip list__chip--head list__chip--link"></span>
 												<span class="list__chip list__chip--head">20분</span>
@@ -452,7 +502,7 @@
 									<section class="list__trail">
 										<div class="list__trailItem">
 											<section class="list_trailHead">
-												<p class="list__content">칼국수</p>
+												<p class="list__content">수목원 근처</p>
 											</section>
 											<section class="list__chipStack">
 												<a href="" target="_blank">
@@ -463,10 +513,10 @@
 										</div>
 										<div class="list__trailItem">
 											<section class="list_trailHead">
-												<p class="list__content">칼국수</p>
+												<p class="list__content">대선 칼국수 근처</p>
 											</section>
 											<section class="list__chipStack">
-												<a href="" target="_blank">
+												<a href="https://naver.me/5OQyeHQ1" target="_blank">
 													<span class="list__chip list__chip--trail">캘리포니아 베이커리</span>
 													<span class="list__chip list__chip--trail list__chip--link"></span>
 												</a>
@@ -474,10 +524,10 @@
 										</div>
 										<div class="list__trailItem">
 											<section class="list_trailHead">
-												<p class="list__content">칼국수</p>
+												<p class="list__content">왕실전골아구찜 근처</p>
 											</section>
 											<section class="list__chipStack">
-												<a href="" target="_blank">
+												<a href="https://naver.me/xJiZ1BoV" target="_blank">
 													<span class="list__chip list__chip--trail">빅필드</span>
 													<span class="list__chip list__chip--trail list__chip--link"></span>
 												</a>
@@ -493,7 +543,7 @@
 											<p class="list__header">저녁 식사</p>
 										</div>
 										<section class="list__chipStack">
-											<a href="" target="_blank">
+											<a href="https://naver.me/55rmvzMp" target="_blank">
 												<span class="list__chip list__chip--head">조기종의 향미각</span>
 												<span class="list__chip list__chip--head list__chip--link"></span>
 												<span class="list__chip list__chip--head">!</span>
@@ -509,7 +559,7 @@
 											<p class="list__header">숙소 이동</p>
 										</div>
 										<section class="list__chipStack">
-											<a href="" target="_blank">
+											<a href="https://naver.me/FCAflwge" target="_blank">
 												<span class="list__chip list__chip--head">계룡산 펜션</span>
 												<span class="list__chip list__chip--head list__chip--link"></span>
 												<span class="list__chip list__chip--head">1시간</span>
@@ -563,7 +613,7 @@
 												<p class="list__content">또 빵먹어?</p>
 											</section>
 											<section class="list__chipStack">
-												<a href="" target="_blank">
+												<a href="https://naver.me/5VmQH4BD" target="_blank">
 													<span class="list__chip list__chip--trail">챔프스페이스</span>
 													<span class="list__chip list__chip--trail list__chip--link"></span>
 												</a>
@@ -572,7 +622,7 @@
 									</section>
 								</li>
 								<li class="list__closure">
-									<img src="src/rabbit_test.svg" alt="" />
+									<img src="src/rabbit_1.webp" />
 									<p>또 만나요!</p>
 								</li>
 							</ol>

@@ -1,34 +1,39 @@
 // Timer
 window.addEventListener("DOMContentLoaded", () => {
-	const TIMER_LARGE = document.getElementById("countdown-timer--large");
-	const TIMER_SMALL = document.getElementById("countdown-timer--small");
+	const TIMER = document.getElementById("countdown-timer--large");
+	// const TIMER_CONTENT = document.querySelector(".countdown__content");
 	const TIMER_WRAPPER = document.querySelector(".countdown");
 
 	let mainHeight = window.innerHeight;
 	TIMER_WRAPPER.style.height = mainHeight + "px";
 
 	// Timer Load
-	const target = new Date("2025-01-17T00:00:00+09:00"); // 한국 표준시(KST)
+	const target = new Date("2025-01-17T12:00:00+09:00"); // 한국 표준시(KST)
+
+	const updateTimer = setInterval(updateDom, 1000);
+	updateDom();
 
 	function timer(target) {
 		const now = new Date();
 		const diff = target - now;
-		const message = "Journey Start";
+		const message = updateContent();
 
-		if (diff < 0) {
+		if (diff <= 0) {
+			clearInterval(updateTimer);
 			return { message: message };
 		} else {
-			const day = Math.floor(diff / (1000 * 60 * 60 * 24));
-			const hour = Math.floor((diff / (1000 * 60 * 60)) % 24);
+			// const day = Math.floor(diff / (1000 * 60 * 60 * 24));
+			const hour = Math.floor(diff / (1000 * 60 * 60));
 			const min = Math.floor((diff / (1000 * 60)) % 60);
 			const sec = Math.floor((diff / 1000) % 60);
 
+			const formattedHour = hour.toString().padStart(2, 0);
 			const formattedMin = min.toString().padStart(2, 0);
 			const formattedSec = sec.toString().padStart(2, 0);
 
 			return {
-				day: day,
-				hour: hour,
+				// day: day,
+				hour: formattedHour,
 				min: formattedMin,
 				sec: formattedSec,
 			};
@@ -38,16 +43,24 @@ window.addEventListener("DOMContentLoaded", () => {
 	function updateDom() {
 		const data = timer(target);
 		if (data.message) {
-			TIMER_LARGE.textContent = 0;
-			TIMER_SMALL.textContent = data.message;
+			TIMER_WRAPPER.append(data.message);
 		} else {
-			TIMER_LARGE.textContent = data.day;
-			TIMER_SMALL.textContent = `${data.hour}: ${data.min}: ${data.sec}`;
+			TIMER.textContent = `${data.hour}:${data.min}:${data.sec}`;
 		}
 	}
 
-	updateDom();
-	setInterval(updateDom, 1000);
+	function updateContent() {
+		const container = document.createElement("div");
+		const img = document.createElement("img");
+		const text = document.createElement("h2");
+		text.innerHTML = `여행은 <br/> 시작되었어요`;
+		img.setAttribute("src", "src/rabbit_1.webp");
+
+		container.className = "countdown__content";
+		img.className = "countdown__img";
+		container.append(img, text);
+		return container;
+	}
 });
 
 // Carousel
@@ -71,11 +84,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	// initial
 	carousel.style.transform = `translateX(${-(curIndex + 1) * 100}%)`;
-	carousel.addEventListener("mousedown", (e) => {
+	carousel.addEventListener("pointerdown", (e) => {
 		startPos = e.clientX;
 	});
 
-	carousel.addEventListener("mouseup", (e) => {
+	carousel.addEventListener("pointerup", (e) => {
 		let dist = 0;
 		let threshold = 30;
 
@@ -124,7 +137,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		}, 500);
 	}
 
-	carouselBtnContainer.addEventListener("click", (e) => {
+	carouselBtnContainer.addEventListener("pointerup", (e) => {
 		targetIndex = Number(e.target.getAttribute("data-index"));
 		if (targetIndex !== null) {
 			updateBtn(targetIndex);
@@ -219,7 +232,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		navBtn.classList.add("is-wiggle");
 	}, 2000);
 
-	window.addEventListener("click", (e) => {
+	window.addEventListener("pointerup", (e) => {
 		if (e.target !== navContent && e.target !== navBtn) {
 			navContent.classList.remove("navigation__content--unwrapped");
 			navBtn.classList.add("is-wiggle");
@@ -227,7 +240,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	});
 
 	//button Event
-	navBtn.addEventListener("click", () => {
+	navBtn.addEventListener("pointerup", () => {
 		navContent.classList.toggle("navigation__content--unwrapped");
 		navBtn.classList.toggle("is-wiggle");
 	});
@@ -235,11 +248,42 @@ window.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("DOMContentLoaded", () => {
 	const activityNumbers = document.querySelectorAll(".activity__text--caption");
-	console.log(activityNumbers);
 
 	let count = 1;
 	activityNumbers.forEach((number) => {
-		number.textContent = `0${count}`;
+		formattedCount = count.toString().padStart(2, 0);
+		number.textContent = formattedCount;
 		count++;
 	});
+});
+window.addEventListener("DOMContentLoaded", () => {
+	if (document.documentElement.scrollTop < 1100) {
+		var count = 300;
+		var defaults = {
+			origin: { y: -0.5 },
+			gravity: 1,
+			startVelocity: -35,
+			tick: 300,
+			colors: ["#faa2af", "#ff637f"],
+		};
+
+		function fire(particleRatio, opts) {
+			confetti({
+				...defaults,
+				...opts,
+				particleCount: Math.floor(count * particleRatio),
+			});
+		}
+
+		fire(0.55, {
+			spread: 26,
+			startVelocity: 55,
+		});
+
+		fire(0.45, {
+			spread: 100,
+			decay: 0.91,
+			scalar: 0.8,
+		});
+	}
 });
