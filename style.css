@@ -602,10 +602,6 @@ a {
 	margin-bottom: 12px;
 }
 
-.activity__graphic--isMoving {
-	aspect-ratio: 1 / 1;
-}
-
 /* State */
 .is-uncovered {
 	opacity: 100;
