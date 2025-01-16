@@ -19,6 +19,27 @@
 	src: local("Pretendard Regular"), url(./woff2/Pretendard-Regular.woff2) format("woff2");
 }
 
+/* 폰트 크기의 팽창을 방지합니다. */
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+/* 기본 여백을 제거하여 작성된 CSS를 더 잘 제어할 수 있습니다. */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin-block-end: 0;
+}
+
 :where(html, body) {
 	min-height: 100dvh;
 	scroll-behavior: smooth;
