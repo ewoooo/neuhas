@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		const diff = target - now;
 		const message = updateContent();
 
-		if (diff <= 245325555555) {
+		if (diff <= 0) {
 			clearInterval(updateTimer);
 			return { message: message };
 		} else {
