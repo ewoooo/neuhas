@@ -1,7 +1,7 @@
 // Timer
 window.addEventListener("DOMContentLoaded", () => {
-	const TIMER = document.getElementById("countdown-timer--large");
-	// const TIMER_CONTENT = document.querySelector(".countdown__content");
+	const TIMER = document.querySelector(".countdown__heading");
+	const TIMER_CONTAINERS = document.querySelectorAll(".countdown-timer--container");
 	const TIMER_WRAPPER = document.querySelector(".countdown");
 
 	let mainHeight = window.innerHeight;
@@ -44,8 +44,12 @@ window.addEventListener("DOMContentLoaded", () => {
 		const data = timer(target);
 		if (data.message) {
 			TIMER_WRAPPER.append(data.message);
+			TIMER_WRAPPER.style.background = "#000";
+			TIMER.innerHTML = "";
 		} else {
-			TIMER.textContent = `${data.hour}:${data.min}:${data.sec}`;
+			TIMER_CONTAINERS[0].textContent = data.hour;
+			TIMER_CONTAINERS[1].textContent = data.min;
+			TIMER_CONTAINERS[2].textContent = data.sec;
 		}
 	}
 

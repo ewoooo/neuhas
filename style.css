@@ -248,10 +248,27 @@ a {
 }
 
 #countdown-timer--large {
+	position: relative;
+	left: 2px;
+	display: flex;
 	font-size: 60px;
 	font-weight: 800;
-	line-height: 88px;
+	line-height: 60px;
+	> span {
+		position: relative;
+		top: -4px;
+		margin-right: 4px;
+	}
 }
+
+.countdown-timer--text {
+	padding-top: 40px;
+}
+
+.countdown-timer--container {
+	width: 80px;
+}
+
 .countdown__content {
 	font-size: 16px;
 	line-height: 32px;
@@ -271,7 +288,7 @@ a {
 .countdown__img--mini {
 	width: 70px;
 	height: 70px;
-	margin-bottom: -10px;
+	margin-bottom: -5px;
 }
 
 .content__text {
