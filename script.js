@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		const diff = target - now;
 		const message = updateContent();
 
-		if (diff <= 0) {
+		if (diff <= 245325555555) {
 			clearInterval(updateTimer);
 			return { message: message };
 		} else {
@@ -57,7 +57,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		const container = document.createElement("div");
 		const img = document.createElement("img");
 		const text = document.createElement("h2");
-		text.innerHTML = `여행은 <br/> 시작되었어요`;
+		text.textContent = `여행이 시작됐어요!`;
 		img.setAttribute("src", "src/rabbit_1.webp");
 
 		container.className = "countdown__content";
@@ -75,6 +75,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	const carouselBtns = carouselBtnContainer.children;
 	const firstClone = carousel.firstElementChild.cloneNode(true);
 	const lastClone = carousel.lastElementChild.cloneNode(true);
+	const date = new Date();
 	carousel.append(firstClone);
 	carousel.prepend(lastClone);
 	let curIndex = 0;
@@ -83,6 +84,10 @@ window.addEventListener("DOMContentLoaded", () => {
 	// 슬라이드를 하면
 	let startPos = 0;
 	let endPos = 0;
+
+	if (Number(date.getDate()) === 16) curIndex = 0;
+	if (Number(date.getDate()) === 17) curIndex = 1;
+	if (Number(date.getDate()) === 18) curIndex = 2;
 
 	updateBtn(curIndex);
 
@@ -94,7 +99,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	carousel.addEventListener("touchend", (e) => {
 		let dist = 0;
-		let threshold = 130;
+		let threshold = 100;
 
 		e.preventDefault();
 		endPos = e.changedTouches[0].clientX;
@@ -298,7 +303,7 @@ window.addEventListener("DOMContentLoaded", () => {
 			origin: { y: -0.5 },
 			gravity: 1,
 			startVelocity: -35,
-			tick: 300,
+			tick: 360,
 			colors: ["#faa2af", "#ff637f"],
 		};
 
