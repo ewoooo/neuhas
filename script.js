@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		const diff = target - now;
 		const message = updateContent();
 
-		if (diff <= 1231232132133) {
+		if (diff <= 0) {
 			clearInterval(updateTimer);
 			return { message: message };
 		} else {
@@ -85,9 +85,9 @@ window.addEventListener("DOMContentLoaded", () => {
 	let startPos = 0;
 	let endPos = 0;
 
-	if (Number(date.getDate()) === 16) curIndex = 0;
-	if (Number(date.getDate()) === 17) curIndex = 1;
-	if (Number(date.getDate()) === 18) curIndex = 2;
+	if (Number(date.getDate()) === 17) curIndex = 0;
+	if (Number(date.getDate()) === 18) curIndex = 1;
+	if (Number(date.getDate()) === 19) curIndex = 2;
 
 	updateBtn(curIndex);
 
